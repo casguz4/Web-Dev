@@ -2,12 +2,13 @@
           <div class="flex">
           <?php
             //lightbox begins
+            $domain = "your domain";
             //count and add file names to an array
-            $dir = '/var/www/vhosts/worldwise.net/httpdocs/templates/templates/';//directory for slider images
+            $dir = '/var/www/vhosts/$domain/httpdocs/templates/templates/';//directory for slider images
             $files = scandir($dir);//array that holds slider images
             $filepath ="/templates/templates/";//path for slider images
 
-            $thumbDir = '/var/www/vhosts/worldwise.net/httpdocs/templates/thumbnails/';//dirctory for thumbnails
+            $thumbDir = '/var/www/vhosts/$domain/httpdocs/templates/thumbnails/';//dirctory for thumbnails
             $thumb = scandir($thumbDir);//scan and push to array for thumbnail images
             $thumbPath = '/templates/thumbnails/';//path for thumbnails
             for($i = 2; $i < count($thumb); $i++){?>
